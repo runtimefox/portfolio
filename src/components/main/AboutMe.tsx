@@ -16,10 +16,10 @@ const text = [
 
 export const AboutMe: FC = () => {
   return (
-    <section className="bg-gray-100 w-full py-24 px-4" id="about">
-      <div className="max-w-xl mx-auto text-center flex flex-col gap-8">
+    <section className="bg-gray-100 w-full py-12 md:py-24 px-4" id="About">
+      <div className="max-w-xl mx-auto text-center flex flex-col gap-6 md:gap-8">
         <motion.h2
-          className="font-gilroy font-bold text-4xl"
+          className="font-gilroy font-bold text-3xl md:text-4xl"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -27,17 +27,16 @@ export const AboutMe: FC = () => {
           viewport={{ once: true }}>
           About Me
         </motion.h2>
-
-        {text.map((text, i) => (
+        {text.map((t, i) => (
           <motion.p
             key={i}
-            className="font-gilroy font-medium text-base leading-relaxed"
+            className="font-gilroy font-medium text-sm md:text-base leading-relaxed"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.6, delay: i * 0.15 }}
             viewport={{ once: true }}>
-            {text}
+            {t}
           </motion.p>
         ))}
       </div>
