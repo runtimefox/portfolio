@@ -12,10 +12,12 @@ export const NavigationTabs: FC = () => {
   const handleTabClick = (tab: Tabs) => {
     setActiveTab(tab);
     setMenuOpen(false);
-    const section = document.getElementById(tab.toLowerCase());
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
+    setTimeout(() => {
+      const section = document.getElementById(tab);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export const Hero: FC = () => {
   return (
-    <section className="max-w-full px-4 md:px-8 py-6" id="home">
+    <section className="max-w-full px-4 md:px-8 py-6" id="Home">
       <div className="max-w-5xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <motion.h1

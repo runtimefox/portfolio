@@ -25,17 +25,16 @@ const SKILLS = [
 
 export const Skills: FC = () => {
   return (
-    <section className="w-full py-24 px-4" id="skills">
-      <div className="max-w-2xl mx-auto text-center flex flex-col gap-8">
+    <section className="w-full py-12 md:py-24 px-4" id="Skills">
+      <div className="max-w-2xl mx-auto text-center flex flex-col gap-6 md:gap-8">
         <motion.h2
-          className="font-gilroy font-bold text-4xl"
+          className="font-gilroy font-bold text-3xl md:text-4xl"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}>
           Skills
         </motion.h2>
-
         <motion.p
           className="font-gilroy font-medium text-base"
           initial={{ opacity: 0 }}
@@ -44,8 +43,7 @@ export const Skills: FC = () => {
           viewport={{ once: true }}>
           I work with
         </motion.p>
-
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           {SKILLS.map(({ name, icon: Icon, color }, i) => (
             <motion.div
               key={name}
@@ -55,8 +53,8 @@ export const Skills: FC = () => {
               transition={{ duration: 0.4, delay: i * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.15 }}>
-              <Icon className={`text-5xl ${color}`} />
-              <span className="font-gilroy font-medium text-lg">{name}</span>
+              <Icon className={`text-4xl md:text-5xl ${color}`} />
+              <span className="font-gilroy font-medium text-sm md:text-lg">{name}</span>
             </motion.div>
           ))}
         </div>
