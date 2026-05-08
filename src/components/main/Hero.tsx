@@ -36,7 +36,8 @@ export const Hero: FC = () => {
             src="/images/Ivan Yuzov.JPG"
             alt="Ivan Yuzov"
             fill
-            className="object-cover object-center rounded-sm"
+            className="object-cover sm:object-center rounded-sm"
+            style={{ objectPosition: 'center 40%' }}
             priority
           />
         </motion.div>
