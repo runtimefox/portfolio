@@ -46,7 +46,6 @@ export const NavigationTabs: FC = () => {
         ))}
       </nav>
 
-      {/* Мобильный */}
       <div className="flex md:hidden justify-between items-center py-4">
         <span className="font-gilroy font-bold text-lg">{activeTab}</span>
         <button onClick={() => setMenuOpen((prev) => !prev)}>
